@@ -1,9 +1,9 @@
 base: core18
 name: opentrack
 version: 3.0.0.dev0
-summary: headtracking thingymabob
+summary: head tracking for games and flight simulators
 description: |
-    TODO write this
+    opentrack is an application dedicated to tracking user's head movements and relaying the information to games and flight simulation software
 
 confinement: devmode
 grade: devel
@@ -18,8 +18,8 @@ apps:
 parts:
     opentrack:
         plugin: cmake
-        # why oh why if i specify source as ".." does that become "/mnt/opentrack/parts/opentrack/src"?
-        source: /mnt/opentrack
+        # Why oh why if i specify source as ".." does that become "/mnt/opentrack/parts/opentrack/src"?
+        source: /mnt/opentrack  # TODO change source to git
         build-packages:
             # How to make this DEBIAN_FRONTEND=noninteractive? stupid tzdata!
             # Work around is to install tzdata to the system beforehand.
