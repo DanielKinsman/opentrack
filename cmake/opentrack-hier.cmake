@@ -28,8 +28,8 @@ elseif(WIN32)
     set(opentrack-i18n-path "./i18n")
     set(opentrack-hier-debug "./debug")
 else()
-    set(opentrack-hier-pfx "libexec/opentrack")
-    set(opentrack-hier-path "/../libexec/opentrack/")   # MUST HAVE A TRAILING BACKSLASH
+    set(opentrack-hier-pfx "lib/opentrack")
+    set(opentrack-hier-path "/../lib/opentrack/")   # MUST HAVE A TRAILING BACKSLASH
     set(opentrack-hier-doc "/share/doc/opentrack/")     # MUST HAVE A TRAILING BACKSLASH
     set(opentrack-doc-pfx "./share/doc/opentrack")
     set(opentrack-doc-src-pfx "./share/doc/opentrack/source-code")

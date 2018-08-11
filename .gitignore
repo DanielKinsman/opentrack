@@ -1,6 +1,4 @@
 /CMakeLists.txt.user
-*~
-/build*
 /installer/Output
 # merely git cola saves there
 /patches/
@@ -11,3 +9,10 @@
 /.idea/
 /sdk-paths-*.cmake
 /.vs/
+
+# snapcraft stuff
+snap/parts/
+snap/prime/
+snap/snap/
+snap/stage/
+snap/*.snap
