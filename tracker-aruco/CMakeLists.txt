@@ -10,7 +10,7 @@ endfunction()
 find_package(OpenCV QUIET)
 
 if(OpenCV_FOUND)
-    set(SDK_ARUCO_LIBPATH "" CACHE FILEPATH "Aruco paper marker tracker static library path")
+    set(SDK_ARUCO_LIBPATH "/mnt/opentrack/snap/parts/arucosdk/build/src/libaruco.a" CACHE FILEPATH "Aruco paper marker tracker static library path")
     if(SDK_ARUCO_LIBPATH)
 
         maybe_add_static_define()

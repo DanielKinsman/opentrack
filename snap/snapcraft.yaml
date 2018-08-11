@@ -16,6 +16,10 @@ apps:
             LD_LIBRARY_PATH: $LD_LIBRARY_PATH:$SNAP/lib/opentrack
 
 parts:
+    arucosdk:
+        plugin: cmake
+        source: https://github.com/opentrack/aruco.git
+
     opentrack:
         plugin: cmake
         # Why oh why if i specify source as ".." does that become "/mnt/opentrack/parts/opentrack/src"?
@@ -34,4 +38,6 @@ parts:
             - qttools5-dev-tools
         stage-packages:
             - libqt5gui5
-        after: [qt5conf]
+        after:
+            - qt5conf
+            - arucosdk

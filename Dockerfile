@@ -33,4 +33,4 @@ env SNAPCRAFT_SETUP_CORE 1
 volume /mnt/opentrack
 # TODO replace above with git clone (or build arg parameterize it)
 workdir /mnt/opentrack/snap
-cmd snapcraft clean && snapcraft snap --enable-geoip
+cmd snapcraft snap --enable-geoip
