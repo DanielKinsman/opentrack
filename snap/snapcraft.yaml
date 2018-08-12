@@ -22,6 +22,8 @@ parts:
 
     opentrack:
         plugin: cmake
+        configflags:
+            - -DSDK_ARUCO_LIBPATH:FILEPATH=/mnt/opentrack/snap/parts/arucosdk/build/src/libaruco.a
         # Why oh why if i specify source as ".." does that become "/mnt/opentrack/parts/opentrack/src"?
         source: /mnt/opentrack  # TODO change source to git
         build-packages:
