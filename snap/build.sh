@@ -2,8 +2,8 @@
 
 set -e
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+DIR="$SCRIPT_DIR/../"
 
-cd $DIR
-docker build . --tag opentrack_ci:latest
+docker build -f "$SCRIPT_DIR/Dockerfile" "$DIR" --tag opentrack_ci:latest
 docker run -v $DIR:/mnt/opentrack opentrack_ci:latest
