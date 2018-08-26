@@ -1,9 +1,10 @@
 base: core18
 name: opentrack
-version: 3.0.0.dev0
+version: 2.4.0.dev0
 summary: head tracking for games and flight simulators
 description: |
-    opentrack is an application dedicated to tracking user's head movements and relaying the information to games and flight simulation software
+    opentrack is an application dedicated to tracking user's head movements and relaying the information
+    to games and flight simulation software
 
 confinement: devmode
 grade: devel
@@ -11,7 +12,13 @@ grade: devel
 apps:
     opentrack:
         command: qt5-launch bin/opentrack
-        plugs: [camera]
+        plugs:
+            # see syslog when running in devmode to see what opentrack is trying to use but can't
+            - camera  # doesn't work!? Needs dbus stuff?
+            - network  # does this work for udp receiving or do I need network-bind for that?
+            - x11
+            # TODO dbus stuff
+
         environment:
             LD_LIBRARY_PATH: $LD_LIBRARY_PATH:$SNAP/lib/opentrack
 
